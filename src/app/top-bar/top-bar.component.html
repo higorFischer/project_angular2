@@ -1,0 +1,27 @@
+<div class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li *ngIf="sideBarOpen" ><a (click)="sideNav()"><i class="glyphicon glyphicon-chevron-left"></i></a></li>
+      <li *ngIf="!sideBarOpen" ><a (click)="sideNav()"><i class="glyphicon glyphicon-chevron-down"></i></a></li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href=""><i class="glyphicon glyphicon-bell" ></i></a></li>
+      <li class="person">
+        <a href="">
+          <span>
+
+            <span>
+              <img class="person-img" src="{{person.img}}" alt="" >
+              <span *ngIf="person.notification" class="notification"></span>
+            </span>
+            <span><b>{{person.name}}</b></span>
+            <span class="glyphicon glyphicon-menu-down"></span>
+
+          </span>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</div>

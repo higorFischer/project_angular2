@@ -1,0 +1,24 @@
+<div id="mySidenav" class="sidenav">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-12 header">
+        <img src="../../assets/logo.png" alt="" id="logo">
+        <img class="person-img" src="{{person.img}}" alt="" >
+      </div>
+
+      <div (click)="checkPage('global_chat')" [ngClass]="{clickedStatus: page === 'global_chat'}" class="col-sm-12 center">
+          <p> <span class="glyphicon glyphicon-globe side"></span>Global Chat</p>
+      </div>
+
+      <div (click)="checkPage('fluency_center')" [ngClass]="{clickedStatus: page === 'fluency_center'}"  class="col-sm-12 center">
+        <p> <span class="glyphicon glyphicon-phone-alt side"></span>Fluency Center</p>
+      </div>
+
+      <div (click)="checkPage('message_center')" [ngClass]="{clickedStatus: page === 'message_center'}"  class="col-sm-12 center">
+        <p><span class="glyphicon glyphicon-comment side"></span>Message Center</p>
+      </div>
+
+    </div>
+  </div>
+</div>
